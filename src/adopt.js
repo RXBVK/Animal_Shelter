@@ -93,8 +93,6 @@ class Adopt extends React.Component {
             address: "",
             arrival: ""
         };
-        this.handleInputChange = this.handleInputChange.bind(this);
-        this.handleAnimalName = this.handleAnimalName.bind(this);
     }
     componentWillMount() {
         if (this.state.searches.length === 0) {
@@ -103,15 +101,14 @@ class Adopt extends React.Component {
     }
     handleFilter() {
         this.state.myAnimals.forEach(animal => {
-            const properType = (this.state.catChecked && animal.type === "cat") || (this.state.dogChecked && animal.type === "dog");
-            const uniqueAnimal = this.state.searches.includes(animal) === false;
+            const isProperType = (this.state.catChecked && animal.type === "cat") || (this.state.dogChecked && animal.type === "dog");
             const properAnimalAge = parseInt(animal.age);
             const properFromAge = parseInt(this.state.fromAge);
             const properToAge = parseInt(this.state.toAge);
             const minAge = (isNaN(properFromAge) || properFromAge <= properAnimalAge);
             const maxAge = (isNaN(properToAge) || properToAge >= properAnimalAge);
-            const rightAge = (properFromAge.length === 0 && properToAge.length === 0) || (minAge && maxAge);
-            if (properType && uniqueAnimal && rightAge) {
+            const isAgeRight = (properFromAge.length === 0 && properToAge.length === 0) || (minAge && maxAge);
+            if (isProperType && isAgeRight) {
                 this.setState(prevState => ({
                     searches: [...prevState.searches, animal]
                 }))
@@ -125,7 +122,7 @@ class Adopt extends React.Component {
             chosenAnimal: event.target.id
         })
     }
-    async handleInputChange(event) {
+    handleInputChange = async (event) => {
         const target = event.target;
         const value = target.type === "checkbox" ? target.checked : target.value;
         const name = target.name;

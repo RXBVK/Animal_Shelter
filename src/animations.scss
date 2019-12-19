@@ -1,0 +1,29 @@
+@keyframes scaleBg{
+    0%{
+      transform: scale(1);
+    }
+    100%{
+      transform: scale(1.2);
+    }
+  }
+  @keyframes slideInNavLinks{
+    0%{
+      opacity: 0;
+      transform: translateX(120px);
+    }
+    100%{
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
+  
+.fadeItIn{
+    opacity: 0;
+    transform: translateY(10vh);
+    transition: opacity 500ms ease-in, transform 1s ease-in;
+    will-change: opacity;
+  }
+  .fadeItIn.faded{
+    opacity: 1;
+    transform: translateY(0);
+  }

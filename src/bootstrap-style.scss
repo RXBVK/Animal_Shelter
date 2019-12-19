@@ -3,17 +3,11 @@
   padding: 0;
   font-family: Poppins, sans-serif;
 }
-$orange: #B7715F;
-$dark-orange: #A75D4A;
-$darkest-orange: #924633;
-@keyframes scaleBg{
-  0%{
-    transform: scale(1);
-  }
-  100%{
-    transform: scale(1.2);
-  }
-}
+
+@import "./colors";
+@import "./animations";
+@import "./mediaquery";
+
 #introduction-wrap{
   width: 100%;
   height: 100vh;
@@ -79,7 +73,6 @@ $darkest-orange: #924633;
       letter-spacing: 2px;
       padding-bottom: 5px;
       &:hover{
-        color: $dark-orange;
         transform: scale(1.1);
       }
     }
@@ -89,7 +82,6 @@ $darkest-orange: #924633;
   background-color: rgba(0,0,0,0.1);
 }
 article{
-  width: 50%;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -99,6 +91,7 @@ article{
   padding: 0 10%;
   p{
     padding-right: 20%;
+    font-size: 18px;
     margin: 40px 0 20px 0;
     font-weight: 300;
   }
@@ -112,6 +105,11 @@ article{
     color: white;
     font-size: 26px;
     font-weight: 500;
+    transition: all 200ms linear;
+    outline: none;
+    &:hover{
+      background-color: $darkest-orange;
+    }
   }
 }
 }
@@ -151,18 +149,21 @@ article{
       text-align: center;
       color: white;
       h3{
+        font-size: 32px;
         position: absolute;
         bottom: 80%;
       }
-      p{position: absolute;
+      p{
+        position: absolute;
         top: 30%;
         padding: 0 20px;
         font-weight: 300;
+        font-size: 22px;
       }
       i{
         position: absolute;
         bottom: 23%;
-        font-size: 72px;
+        font-size: 100px;
       }
       button{
         position: absolute;
@@ -171,9 +172,11 @@ article{
         background-color: $darkest-orange;
         text-transform: uppercase;
         font-weight: 500;
+        font-size: 22px;
         color: white;
         border: 1px solid $darkest-orange;
         border-radius: 6px;
+        outline: none;
       }
     }
   }
@@ -427,7 +430,7 @@ article{
 }
 #footer-wrap{
   width: 100%;
-  height: 20vh;
+  height: 30vh;
   background-color: $orange;
   .footer{
     display: flex;
@@ -461,60 +464,12 @@ article{
   }
 }
 
-@media (min-width: 1001px){
-  #burger{
-    display: none;
-  }
-  .navbar li::before{
-    content: "";
-    display: block;
-    position: absolute;
-    width: 0%;
-    height: 3px;
-    bottom: 0;
-    left: 50%;
-    background-color: white;
-    transition: 350ms all linear;
-  }
-  .navbar li:hover::before{
-    width: 100%;
-    left: 0;
-    background-color: $dark-orange;
-  }
-}
-@media (max-width: 1000px){
-  .navbar{
-  #burger{
-    display: block;
-  }
-  ul{
-    position: absolute;
-    flex-direction: column;
-    top: 0;
-    right: 0;
-    height: 100vh;
-    width: 50%;
-    text-align: center;
-    background-color: rgba(0,0,0,0.5);
-  }
-}
-  .adopt{
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    .adopt-header{
-      h1{
-        text-align: center;
-      }
-    }
-  }
-}
 #contact-wrap{
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-top: 100px;
-  height: 80vh;
+  height: 70vh;
   width: 100%;
   background-color: $orange;
   color: white;

@@ -1,5 +1,6 @@
 import React from "react";
 import Burger from "./burger";
+const navLinks = ["Wstęp", "Adopcja", "Adoptuj online", "Kontakt"];
 class Introduction extends React.Component {
     constructor(props) {
         super(props);
@@ -36,27 +37,16 @@ class Introduction extends React.Component {
                 <div className="background"></div>
                 <div className={"navbar" + (this.state.isScrolled === true ? " scrolled" : "") + (this.state.isOpened === true ? " opened" : "")}>
                     <img src="Images/logo.png" id="logo" alt="logo" />
-                    <ul>
-                        <li
-                            id="1"
-                            onClick={this.scrollToSection}>
-                            Wstęp
-                        </li>
-                        <li
-                            id="2"
-                            onClick={this.scrollToSection}>
-                            Adopcja
+                    <ul className={this.state.isOpened ? "nav-displayed" : ""}>
+                        {navLinks.map((link, index) =>
+                            <li
+                                id={index + 1}
+                                key={index}
+                                onClick={this.scrollToSection}
+                            >
+                                {link}
                             </li>
-                        <li
-                            id="3"
-                            onClick={this.scrollToSection}>
-                            Adoptuj online
-                            </li>
-                        <li
-                            id="4"
-                            onClick={this.scrollToSection}>
-                            Kontakt
-                            </li>
+                        )}
                     </ul>
                     <Burger
                         isOpened={this.state.opened}
