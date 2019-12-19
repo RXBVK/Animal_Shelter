@@ -10,73 +10,73 @@ class Adopt extends React.Component {
                 {
                     name: "Molly",
                     type: "cat",
-                    age: "3",
+                    age: 3,
                     imagePath: "Images/1.jpg"
                 },
                 {
                     name: "Goofy",
                     type: "dog",
-                    age: "7",
+                    age: 7,
                     imagePath: "Images/2.jpg"
                 },
                 {
                     name: "Benji",
                     type: "dog",
-                    age: "6",
+                    age: 6,
                     imagePath: "Images/3.jpg"
                 },
                 {
                     name: "Boo",
                     type: "dog",
-                    age: "9",
+                    age: 9,
                     imagePath: "Images/4.jpg"
                 },
                 {
                     name: "Max",
                     type: "dog",
-                    age: "10",
+                    age: 10,
                     imagePath: "Images/5.jpg"
                 },
                 {
                     name: "Charlie",
                     type: "dog",
-                    age: "13",
+                    age: 13,
                     imagePath: "Images/6.jpg"
                 },
                 {
                     name: "Barry",
                     type: "dog",
-                    age: "7",
+                    age: 7,
                     imagePath: "Images/7.jpg"
                 },
                 {
                     name: "Ruby",
                     type: "cat",
-                    age: "4",
+                    age: 4,
                     imagePath: "Images/8.jpg"
                 },
                 {
                     name: "Jack",
                     type: "cat",
-                    age: "9",
+                    age: 9,
                     imagePath: "Images/9.jpg"
                 },
                 {
                     name: "Bailey",
                     type: "cat",
-                    age: "3",
+                    age: 3,
                     imagePath: "Images/10.jpg"
                 },
                 {
                     name: "Toby",
                     type: "cat",
-                    age: "1",
+                    age: 1,
                     imagePath: "Images/11.jpg"
                 },
                 {
                     name: "Chloe",
                     type: "cat",
-                    age: "2",
+                    age: 2,
                     imagePath: "Images/12.jpg"
                 }
             ],
@@ -102,11 +102,11 @@ class Adopt extends React.Component {
     handleFilter() {
         this.state.myAnimals.forEach(animal => {
             const isProperType = (this.state.catChecked && animal.type === "cat") || (this.state.dogChecked && animal.type === "dog");
-            const properAnimalAge = parseInt(animal.age);
+            const isAnimalUnique = this.state.searches.includes(animal) === false;
             const properFromAge = parseInt(this.state.fromAge);
             const properToAge = parseInt(this.state.toAge);
-            const minAge = (isNaN(properFromAge) || properFromAge <= properAnimalAge);
-            const maxAge = (isNaN(properToAge) || properToAge >= properAnimalAge);
+            const minAge = (isNaN(properFromAge) || properFromAge <= animal.age);
+            const maxAge = (isNaN(properToAge) || properToAge >= animal.age);
             const isAgeRight = (properFromAge.length === 0 && properToAge.length === 0) || (minAge && maxAge);
             if (isProperType && isAgeRight) {
                 this.setState(prevState => ({
@@ -115,7 +115,7 @@ class Adopt extends React.Component {
             }
         });
     }
-    handleAnimalName(event) {
+    handleAnimalName = (event) => {
         const target = event.target;
         const value = target.name;
         this.setState({

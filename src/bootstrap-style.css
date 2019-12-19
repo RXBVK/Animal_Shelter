@@ -97,7 +97,6 @@
 @media (max-width: 1000px) {
   .introduction article {
     width: 100%;
-    text-align: center;
   }
   .navbar #burger {
     display: block;
@@ -156,7 +155,13 @@
             justify-content: center;
   }
   .adopt .adopt-header h1 {
-    text-align: center !important;
+    text-align: center;
+  }
+  .process-steps {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
@@ -813,7 +818,7 @@
 
 #footer-wrap .footer #footer-logo {
   position: absolute;
-  left: 20px;
+  left: 10%;
 }
 
 #footer-wrap .footer .sponsors-images {
