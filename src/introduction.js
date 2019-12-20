@@ -25,7 +25,6 @@ class Introduction extends React.Component {
         })
     }
     scrollToSection(event) {
-        console.log(event.target.id);
         window.scrollTo({
             top: window.innerHeight * event.target.id - window.innerHeight,
             behavior: 'smooth',
@@ -34,7 +33,6 @@ class Introduction extends React.Component {
     render() {
         return (
             <div className="introduction">
-                <div className="background"></div>
                 <div className={"navbar" + (this.state.isScrolled === true ? " scrolled" : "") + (this.state.isOpened === true ? " opened" : "")}>
                     <img src="Images/logo.png" id="logo" alt="logo" />
                     <ul className={this.state.isOpened ? "nav-displayed" : ""}>

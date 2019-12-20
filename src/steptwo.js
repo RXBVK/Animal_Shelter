@@ -32,7 +32,6 @@ class StepTwo extends React.Component {
                             maxLength="9"
                             id="phone-number"
                             placeholder="Telefon"
-                            maxLength="9"
                             value={this.props.phoneNumber}
                             onChange={this.props.handleInputChange}
                         ></input>

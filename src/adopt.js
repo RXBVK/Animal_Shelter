@@ -102,7 +102,6 @@ class Adopt extends React.Component {
     handleFilter() {
         this.state.myAnimals.forEach(animal => {
             const isProperType = (this.state.catChecked && animal.type === "cat") || (this.state.dogChecked && animal.type === "dog");
-            const isAnimalUnique = this.state.searches.includes(animal) === false;
             const properFromAge = parseInt(this.state.fromAge);
             const properToAge = parseInt(this.state.toAge);
             const minAge = (isNaN(properFromAge) || properFromAge <= animal.age);
@@ -116,8 +115,6 @@ class Adopt extends React.Component {
         });
     }
     handleAnimalName = (event) => {
-        const target = event.target;
-        const value = target.name;
         this.setState({
             chosenAnimal: event.target.id
         })
