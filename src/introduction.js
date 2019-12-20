@@ -14,9 +14,7 @@ class Introduction extends React.Component {
     componentDidMount() {
         document.addEventListener('scroll', () => {
             const isScrolled = window.scrollY > 50;
-            if (isScrolled !== this.state.isTop) {
-                this.setState({ isScrolled })
-            }
+            this.setState({ isScrolled });
         });
     }
     handleClick() {
