@@ -40,8 +40,8 @@ class Contact extends React.Component {
                             <p>sob - nd: 9:00 - 15:00</p>
                         </div>
                         <div className="contact-media">
-                            Kontakt dla mediów oraz w sprawie współpracy:
-                            RZECZNIK SCHRONISKA  Aleksandra Cukier, e-mail: schronisko.ola@gmail.com
+                            <p>Kontakt dla mediów oraz w sprawie współpracy:
+                            RZECZNIK SCHRONISKA  Aleksandra Cukier, e-mail: schronisko.ola@gmail.com</p>
                         </div>
                     </div>
                 </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import { labels } from "./labels";
 let longitude = 16.997556;
 let latitude = 51.153165;
 let api_key = '123';
@@ -24,11 +25,11 @@ class Weather extends React.Component {
     render() {
         return (
             <div className="weather-info">
-                <h3>Pogoda w dniu przyjazdu: </h3>
-                <p>Stan ogólny: {this.state.summary}</p>
-                <p>Temperatura: {this.state.temperature}&deg;C</p>
-                <p>Szansa na opady: {this.state.precipProbability}%</p>
-                <p>Ciśnienie: {this.state.pressure} hPa</p>
+                <h3>{labels.weather.day}</h3>
+                <p>{labels.weather.summary} {this.state.summary}</p>
+                <p>{labels.weather.temperature} {this.state.temperature}&deg;C</p>
+                <p>{labels.weather.precip} {this.state.precipProbability}%</p>
+                <p>{labels.weather.pressure} {this.state.pressure} hPa</p>
                 <i className="fas fa-cloud-sun"></i>
             </div>
         )

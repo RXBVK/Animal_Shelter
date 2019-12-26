@@ -1,9 +1,10 @@
 import React from "react";
+import { labels } from "./labels";
 class StepOne extends React.Component {
     render() {
         return (
             <div className="step-one step">
-                <h1>Wybierz zwierzę</h1>
+                <h1>{labels.stepOne.chooseAnimal}</h1>
                 <div className="step-content">
                     <div className="inputs">
                         <div className="input-dog">
@@ -14,8 +15,8 @@ class StepOne extends React.Component {
                                 checked={this.props.dogChecked}
                                 onClick={this.props.handleInputChange}
                             />
-                            <label htmlFor="dogInput">Pies</label>
-                            <p>Pies</p>
+                            <label htmlFor="dogInput">{labels.stepOne.dog}</label>
+                            <p>{labels.stepOne.dog}</p>
                         </div>
                         <div className="input-cat">
                             <input
@@ -25,11 +26,11 @@ class StepOne extends React.Component {
                                 checked={this.props.catChecked}
                                 onClick={this.props.handleInputChange}
                             />
-                            <label htmlFor="catInput">Kot</label>
-                            <p>Kot</p>
+                            <label htmlFor="catInput">{labels.stepOne.cat}</label>
+                            <p>{labels.stepOne.cat}</p>
                         </div>
                     </div>
-                    <h3>Wiek zwierzęcia</h3>
+                    <h3>{labels.stepOne.age}</h3>
                     <div className="choose-age">
                         <input type="number"
                             placeholder="OD"

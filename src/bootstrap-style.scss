@@ -80,9 +80,12 @@ article{
   align-items: center;
   color: white;
   padding: 0 10%;
+  font-size: 32px;
+  h2{
+    font-size: 1em;
+  }
   p{
-    padding-right: 20%;
-    font-size: 18px;
+    font-size: 0.6em;
     margin: 40px 0 20px 0;
     font-weight: 300;
   }
@@ -94,12 +97,13 @@ article{
     margin-top: 35px;
     border: 1px solid $dark-orange;
     color: white;
-    font-size: 26px;
+    font-size: 0.75em;
     font-weight: 500;
     transition: all 200ms linear;
     outline: none;
     &:hover{
       background-color: $darkest-orange;
+      border-color: $darkest-orange;
     }
   }
 }
@@ -139,8 +143,9 @@ article{
       justify-content: center;
       text-align: center;
       color: white;
+      font-size: 32px;
       h3{
-        font-size: 32px;
+        font-size: 1em;
         position: absolute;
         bottom: 80%;
       }
@@ -149,12 +154,12 @@ article{
         top: 30%;
         padding: 0 20px;
         font-weight: 300;
-        font-size: 22px;
+        font-size: 0.6em;
       }
       i{
         position: absolute;
         bottom: 23%;
-        font-size: 100px;
+        font-size: 3em;
       }
       button{
         position: absolute;
@@ -163,11 +168,15 @@ article{
         background-color: $darkest-orange;
         text-transform: uppercase;
         font-weight: 500;
-        font-size: 22px;
+        font-size: 0.75em;
         color: white;
         border: 1px solid $darkest-orange;
         border-radius: 6px;
         outline: none;
+        transition: all 400ms linear;
+        &:hover{
+          transform: scale(1.05);
+        }
       }
     }
   }
@@ -188,6 +197,7 @@ article{
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
     h1, h2{
       color: white;
     }
@@ -376,6 +386,7 @@ article{
           margin: 7px;
           font-size: 20px;
           font-weight: 700;
+          cursor: pointer;
         }
         img{
           width: 150px;
@@ -400,6 +411,11 @@ article{
         font-weight: 500;
         font-size: 13px;
         outline: none;
+        transition: all 300ms linear;
+        &:hover{
+          background-color: $darkest-orange;
+          transform: translateY(-3px);
+        }
       }
     }
   }

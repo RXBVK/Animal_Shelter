@@ -1,9 +1,10 @@
 import React from "react";
+import { labels } from "./labels";
 class StepTwo extends React.Component {
     render() {
         return (
             <div className="step-two step">
-                <h1>Wpisz swoje dane</h1>
+                <h1>{labels.stepTwo.enterData}</h1>
                 <div className="step-content step2-content">
                     <div>
                         <input

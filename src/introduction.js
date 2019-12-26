@@ -1,6 +1,7 @@
 import React from "react";
 import Burger from "./burger";
-const navLinks = ["Wstęp", "Adopcja", "Adoptuj online", "Kontakt"];
+import { labels } from "./labels";
+var classNames = require('classnames');
 class Introduction extends React.Component {
     constructor(props) {
         super(props);
@@ -14,7 +15,9 @@ class Introduction extends React.Component {
     componentDidMount() {
         document.addEventListener('scroll', () => {
             const isScrolled = window.scrollY > 50;
-            this.setState({ isScrolled });
+            if (window.innerWidth > 1000) {
+                this.setState({ isScrolled });
+            }
         });
     }
     handleClick() {
@@ -29,12 +32,20 @@ class Introduction extends React.Component {
         })
     }
     render() {
+        var navbarClass = classNames({
+            navbar: true,
+            'scrolled': this.state.isScrolled,
+            'opened': this.state.isOpened
+        });
+        var mobileNav = classNames({
+            'nav-displayed': this.state.isOpened
+        })
         return (
             <div className="introduction">
-                <div className={"navbar" + (this.state.isScrolled === true ? " scrolled" : "") + (this.state.isOpened === true ? " opened" : "")}>
+                <div className={navbarClass}>
                     <img src="Images/logo.png" id="logo" alt="logo" />
-                    <ul className={this.state.isOpened ? "nav-displayed" : ""}>
-                        {navLinks.map((link, index) =>
+                    <ul className={mobileNav}>
+                        {labels.navLinks.map((link, index) =>
                             <li
                                 id={index + 1}
                                 key={index}
@@ -50,9 +61,9 @@ class Introduction extends React.Component {
                     />
                 </div>
                 <article>
-                    <h2>Schronisko dla Bezdomnych Zwierząt we Wrocławiu</h2>
-                    <p>Schronisko dla Bezdomnych Zwierząt we Wrocławiu powstało w 1962 roku. Założyli je, wkładając w to wielką pracę i entuzjazm działacze Towarzystwa Opieki nad Zwierzętami we Wrocławiu.</p>
-                    <button>Więcej informacji</button>
+                    <h2>{labels.article.h2}</h2>
+                    <p>{labels.article.p}</p>
+                    <button>{labels.article.button}</button>
                 </article>
             </div >
         )

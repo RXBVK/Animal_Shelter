@@ -1,14 +1,14 @@
 import React from "react";
+import { labels } from "./labels";
 
 function Footer() {
     return (
         <div className="footer">
             <img src="Images/logo.png" alt="logo" id="footer-logo"></img>
             <div className="footer-links">
-                <span>Informacje</span>
-                <span>Współpraca</span>
-                <span>Kontakt</span>
-                <span>Sponsorzy</span>
+                {labels.footer.map(link =>
+                    <span key={link}>{link}</span>
+                )}
             </div>
             <div className="sponsors-images">
                 <img src="Images/sponsorzy.png" alt="sponsor"></img>
