@@ -2,7 +2,6 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./bootstrap-style.scss";
 import App from "./app";
-import MainPage from "./main";
 import * as serviceWorker from "./serviceWorker";
 
 ReactDOM.render(<MainPage />, document.getElementById("root"));
