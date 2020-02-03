@@ -144,56 +144,58 @@ class Adopt extends React.Component {
     }
     render() {
         return (
-            <div className="adopt">
-                <div className="adopt-header">
-                    <h1>Adopcja online</h1>
-                    <h2>w trzech krokach.</h2>
-                </div>
-                <div className="adopt-steps-wrap">
-                    <div className="steps-buttons">
-                        <button data-target="#carouselExampleIndicators" data-slide-to="0" className="active">Krok I</button>
-                        <button data-target="#carouselExampleIndicators" data-slide-to="1">Krok II</button>
-                        <button data-target="#carouselExampleIndicators" data-slide-to="2">Krok III</button>
+            <div id="adopt-wrap">
+                <div className="adopt">
+                    <div className="adopt-header">
+                        <h1>Adopcja online</h1>
+                        <h2>w trzech krokach.</h2>
                     </div>
-                    <div className="adopt-steps">
-                        <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel" data-interval="false">
-                            <div className="carousel-inner">
-                                <div className="carousel-item active">
-                                    <StepOne handleInputChange={this.handleInputChange}
-                                        handleAnimalName={this.handleAnimalName}
-                                        handleFilter={this.handleFilter}
-                                        dogChecked={this.state.dogChecked}
-                                        catChecked={this.state.catChecked}
-                                        fromAge={this.state.fromAge}
-                                        toAge={this.state.toAge}
-                                        searches={this.state.searches}
-                                        myAnimals={this.state.myAnimals}
-                                        chosenAnimal={this.state.chosenAnimal}
-                                    />
-                                </div>
-                                <div className="carousel-item">
-                                    <StepTwo
-                                        handleInputChange={this.handleInputChange}
-                                        handleFilter={this.handleFilter}
-                                        supposedAge={this.state.supposedAge}
-                                        fName={this.state.fName}
-                                        lastName={this.state.lastName}
-                                        phoneNumber={this.state.phoneNumber}
-                                        city={this.state.city}
-                                        address={this.state.address}
-                                        arrival={this.state.arrival}
-                                    />
-                                </div>
-                                <div className="carousel-item">
-                                    <StepThree
-                                        chosenAnimal={this.state.chosenAnimal}
-                                        fName={this.state.fName}
-                                        lastName={this.state.lastName}
-                                        phoneNumber={this.state.phoneNumber}
-                                        city={this.state.city}
-                                        address={this.state.address}
-                                        arrival={this.state.arrival}
-                                    />
+                    <div className="adopt-steps-wrap">
+                        <div className="steps-buttons">
+                            <button data-target="#carouselExampleIndicators" data-slide-to="0" className="active">Krok I</button>
+                            <button data-target="#carouselExampleIndicators" data-slide-to="1">Krok II</button>
+                            <button data-target="#carouselExampleIndicators" data-slide-to="2">Krok III</button>
+                        </div>
+                        <div className="adopt-steps">
+                            <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel" data-interval="false">
+                                <div className="carousel-inner">
+                                    <div className="carousel-item active">
+                                        <StepOne handleInputChange={this.handleInputChange}
+                                            handleAnimalName={this.handleAnimalName}
+                                            handleFilter={this.handleFilter}
+                                            dogChecked={this.state.dogChecked}
+                                            catChecked={this.state.catChecked}
+                                            fromAge={this.state.fromAge}
+                                            toAge={this.state.toAge}
+                                            searches={this.state.searches}
+                                            myAnimals={this.state.myAnimals}
+                                            chosenAnimal={this.state.chosenAnimal}
+                                        />
+                                    </div>
+                                    <div className="carousel-item">
+                                        <StepTwo
+                                            handleInputChange={this.handleInputChange}
+                                            handleFilter={this.handleFilter}
+                                            supposedAge={this.state.supposedAge}
+                                            fName={this.state.fName}
+                                            lastName={this.state.lastName}
+                                            phoneNumber={this.state.phoneNumber}
+                                            city={this.state.city}
+                                            address={this.state.address}
+                                            arrival={this.state.arrival}
+                                        />
+                                    </div>
+                                    <div className="carousel-item">
+                                        <StepThree
+                                            chosenAnimal={this.state.chosenAnimal}
+                                            fName={this.state.fName}
+                                            lastName={this.state.lastName}
+                                            phoneNumber={this.state.phoneNumber}
+                                            city={this.state.city}
+                                            address={this.state.address}
+                                            arrival={this.state.arrival}
+                                        />
+                                    </div>
                                 </div>
                             </div>
                         </div>
