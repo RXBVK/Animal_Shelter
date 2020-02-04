@@ -11,73 +11,73 @@ class Adopt extends React.Component {
                     name: "Molly",
                     type: "cat",
                     age: 3,
-                    imagePath: "/Shelter-updated/Images/1.jpg"
+                    imagePath: "Images/1.jpg"
                 },
                 {
                     name: "Goofy",
                     type: "dog",
                     age: 7,
-                    imagePath: "/Shelter-updated/Images/2.jpg"
+                    imagePath: "Images/2.jpg"
                 },
                 {
                     name: "Benji",
                     type: "dog",
                     age: 6,
-                    imagePath: "/Shelter-updated/Images/3.jpg"
+                    imagePath: "Images/3.jpg"
                 },
                 {
                     name: "Boo",
                     type: "dog",
                     age: 9,
-                    imagePath: "/Shelter-updated/Images/4.jpg"
+                    imagePath: "Images/4.jpg"
                 },
                 {
                     name: "Max",
                     type: "dog",
                     age: 10,
-                    imagePath: "/Shelter-updated/Images/5.jpg"
+                    imagePath: "Images/5.jpg"
                 },
                 {
                     name: "Charlie",
                     type: "dog",
                     age: 13,
-                    imagePath: "/Shelter-updated/Images/6.jpg"
+                    imagePath: "Images/6.jpg"
                 },
                 {
                     name: "Barry",
                     type: "dog",
                     age: 7,
-                    imagePath: "/Shelter-updated/Images/7.jpg"
+                    imagePath: "Images/7.jpg"
                 },
                 {
                     name: "Ruby",
                     type: "cat",
                     age: 4,
-                    imagePath: "/Shelter-updated/Images/8.jpg"
+                    imagePath: "Images/8.jpg"
                 },
                 {
                     name: "Jack",
                     type: "cat",
                     age: 9,
-                    imagePath: "/Shelter-updated/Images/9.jpg"
+                    imagePath: "Images/9.jpg"
                 },
                 {
                     name: "Bailey",
                     type: "cat",
                     age: 3,
-                    imagePath: "/Shelter-updated/Images/10.jpg"
+                    imagePath: "Images/10.jpg"
                 },
                 {
                     name: "Toby",
                     type: "cat",
                     age: 1,
-                    imagePath: "/Shelter-updated/Images/11.jpg"
+                    imagePath: "Images/11.jpg"
                 },
                 {
                     name: "Chloe",
                     type: "cat",
                     age: 2,
-                    imagePath: "/Shelter-updated/Images/12.jpg"
+                    imagePath: "Images/12.jpg"
                 }
             ],
             dogChecked: true,
