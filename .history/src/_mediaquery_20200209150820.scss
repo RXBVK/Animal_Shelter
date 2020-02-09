@@ -1,5 +1,8 @@
 @import "./colors";
 @media (min-width: 1351px){
+    #introduction-wrap{     
+  background-image: url("/Shelter-updated/Images/background.jpg");
+    }
     .introduction{
     article{
         width: 50%;
@@ -28,6 +31,9 @@
     }
   }
   @media (max-width: 1350px){
+    #introduction-wrap{     
+  background-image: url("/Images/background-mobile.jpg");
+    }
       #adopt-wrap{
           height: auto !important;
       }
