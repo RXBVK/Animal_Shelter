@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Shelter-updated/static/css/main.ef12ecb8.chunk.css",
+    "main.css": "/Shelter-updated/static/css/main.1651aa67.chunk.css",
     "main.js": "/Shelter-updated/static/js/main.ebb323a1.chunk.js",
     "main.js.map": "/Shelter-updated/static/js/main.ebb323a1.chunk.js.map",
     "runtime-main.js": "/Shelter-updated/static/js/runtime-main.4992949d.js",
@@ -8,15 +8,15 @@
     "static/js/2.ffb5c48c.chunk.js": "/Shelter-updated/static/js/2.ffb5c48c.chunk.js",
     "static/js/2.ffb5c48c.chunk.js.map": "/Shelter-updated/static/js/2.ffb5c48c.chunk.js.map",
     "index.html": "/Shelter-updated/index.html",
-    "precache-manifest.9bcf678da66cd91ff43dc436c532546a.js": "/Shelter-updated/precache-manifest.9bcf678da66cd91ff43dc436c532546a.js",
+    "precache-manifest.6909c85dcd94f67690f66bc1c1458606.js": "/Shelter-updated/precache-manifest.6909c85dcd94f67690f66bc1c1458606.js",
     "service-worker.js": "/Shelter-updated/service-worker.js",
-    "static/css/main.ef12ecb8.chunk.css.map": "/Shelter-updated/static/css/main.ef12ecb8.chunk.css.map",
+    "static/css/main.1651aa67.chunk.css.map": "/Shelter-updated/static/css/main.1651aa67.chunk.css.map",
     "static/js/2.ffb5c48c.chunk.js.LICENSE": "/Shelter-updated/static/js/2.ffb5c48c.chunk.js.LICENSE"
   },
   "entrypoints": [
     "static/js/runtime-main.4992949d.js",
     "static/js/2.ffb5c48c.chunk.js",
-    "static/css/main.ef12ecb8.chunk.css",
+    "static/css/main.1651aa67.chunk.css",
     "static/js/main.ebb323a1.chunk.js"
   ]
 }
